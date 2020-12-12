@@ -6,7 +6,7 @@ node('dqa') {
             sh 'mvn clean package'
         }
         stage('testresults'){
-            junit 'gameoflife-web/surefire-reports/*.xml'
+            junit 'gameoflife-web/target/surefire-reports/*.xml'
         }
     }
         stage('archieveartifacts') {
